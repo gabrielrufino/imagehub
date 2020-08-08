@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/imagehub/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/imagehub#readme"
+  "homepage": "https://github.com/gabrielrufino/imagehub#readme",
+  "dependencies": {
+    "commander": "^6.0.0"
+  }
 }
