@@ -1,0 +1,31 @@
+{
+  "name": "imagehub",
+  "version": "0.0.1",
+  "description": "CLI de processamento de imagem",
+  "main": "index.js",
+  "bin": {
+    "imagehub": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielrufino/imagehub.git"
+  },
+  "keywords": [
+    "CLI",
+    "Node.js",
+    "Commander.js"
+  ],
+  "author": "Gabriel Rufino <contato@gabrielrufino.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielrufino/imagehub/issues"
+  },
+  "homepage": "https://github.com/gabrielrufino/imagehub#readme",
+  "dependencies": {
+    "commander": "^6.0.0",
+    "sharp": "^0.25.4"
+  }
+}
