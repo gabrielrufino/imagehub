@@ -13,9 +13,20 @@ program
 
 program
   .command('resize <file>')
+  .option('--width <width>', 'Largura da imagem processada')
+  .option('--height <height>', 'Altura da imagem processada')
   .description('Redimensiona uma imagem')
-  .action(file => {
-    const resized = sharp(file).resize({ width: 50 })
+  .action((file, commandObject) => {
+    const width = Number(commandObject.width) || undefined
+    const height = Number(commandObject.height) || undefined
+
+    const options = { width, height }
+
+    Object
+      .keys(options)
+      .forEach(key => options[key] === undefined && delete options[key])
+
+    const resized = sharp(file).resize(options)
 
     if (program.overwrite) {
       resized
