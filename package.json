@@ -1,6 +1,6 @@
 {
   "name": "imagehub",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "description": "CLI de processamento de imagem",
   "main": "index.js",
   "bin": {
