@@ -2,9 +2,9 @@
   "name": "imagehub",
   "version": "0.3.1",
   "description": "CLI de processamento de imagem",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
-    "imagehub": "./index.js"
+    "imagehub": "./src/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
