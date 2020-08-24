@@ -26,6 +26,7 @@
   "homepage": "https://github.com/gabrielrufino/imagehub#readme",
   "dependencies": {
     "commander": "^6.0.0",
+    "ora": "^5.0.0",
     "sharp": "^0.25.4"
   }
 }
