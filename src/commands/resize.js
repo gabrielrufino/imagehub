@@ -1,8 +1,12 @@
 const { program } = require('commander')
 const sharp = require('sharp')
 const fs = require('fs')
+const ora = require('ora')
 
 module.exports = (file, commandObject) => {
+  const loading = ora('Redimensionando imagem')
+  loading.start()
+
   const width = Number(commandObject.width) || undefined
   const height = Number(commandObject.height) || undefined
 
@@ -19,14 +23,20 @@ module.exports = (file, commandObject) => {
       .toBuffer()
       .then(buffer => {
         fs.writeFile(file, buffer, () => {
-          console.log('Imagem redimensionada')
+          loading.succeed('Imagem redimensionada')
         })
+      })
+      .catch(() => {
+        loading.fail('Imagem não redimensionada')
       })
   } else {
     resized
       .toFile(`imagehub-${file}`)
       .then(() => {
-        console.log(`Imagem redimensionada!`)
+        loading.succeed('Imagem redimensionada')
+      })
+      .catch(() => {
+        loading.fail('Imagem não redimensionada')
       })
   }
 }
