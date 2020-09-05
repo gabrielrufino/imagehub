@@ -3,18 +3,11 @@ const sharp = require('sharp')
 const fs = require('fs')
 const ora = require('ora')
 
-module.exports = (file, commandObject) => {
+module.exports = (file, { width, height }) => {
   const loading = ora('Redimensionando imagem')
   loading.start()
 
-  const width = Number(commandObject.width) || undefined
-  const height = Number(commandObject.height) || undefined
-
-  const options = { width, height }
-
-  Object
-    .keys(options)
-    .forEach(key => options[key] === undefined && delete options[key])
+  const options = JSON.parse(JSON.stringify({ width, height }))
 
   const resized = sharp(file).resize(options)
 
