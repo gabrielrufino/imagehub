@@ -1,6 +1,6 @@
 {
   "name": "imagehub",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "CLI de processamento de imagem",
   "main": "src/index.js",
   "bin": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/gabrielrufino/imagehub#readme",
   "dependencies": {
-    "commander": "^6.0.0",
+    "commander": "^6.1.0",
     "ora": "^5.0.0",
     "sharp": "^0.25.4"
   }
