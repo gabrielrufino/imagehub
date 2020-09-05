@@ -12,8 +12,8 @@ program
 
 program
   .command('resize <file>')
-  .option('--width <width>', 'Largura da imagem processada')
-  .option('--height <height>', 'Altura da imagem processada')
+  .option('--width <width>', 'Largura da imagem processada', value => parseFloat(value))
+  .option('--height <height>', 'Altura da imagem processada', value => parseFloat(value))
   .description('Redimensiona uma imagem')
   .action(resize)
 
